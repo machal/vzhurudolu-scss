@@ -1,0 +1,40 @@
+/* --- Panel se statistikou --- */
+
+.vd-browser-stats ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background: $vd-text-color-lighter;
+  height: 40px;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.vd-browser-stats .browser {
+  display: inline-block;
+  float: left;
+  overflow: hidden;
+  height: 40px;
+  line-height: 40px;
+  border-right: 1px solid white;
+  font-size: 11px;
+  background: $vd-text-color-lighter;
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity = 80);
+  &.supported {
+    background: $body-font-color;
+  }
+  &:hover, &:focus, &:active {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity = 100);
+  }
+}
+
+.vd-browser-stats .notes {
+  @extend .small;
+}

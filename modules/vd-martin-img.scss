@@ -1,0 +1,30 @@
+// VzhuruDolu.cz author photo
+
+.martin-img {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border: 2px solid white !important;
+  text-indent: -5000px;
+  margin: 0 auto 0.5rem;
+  border-radius: 50%;
+  background-size: cover;
+  background-image: url("../img/content/dest/large/martin_michalek.jpg");
+  background-position: center center;
+}
+
+// TODO fujkyhujky
+// Potrebuju to v detailu kurzu odlisit od hlavicky na homepage
+.font-small .martin-img {
+  margin-bottom: -0.5rem;
+}
+
+// TODO
+.martin-img.riki-img {
+  background-image: url("../img/content/dest/large/riki_fridrich.jpg");
+}
+
+// TODO
+.martin-img.robin-img {
+  background-image: url("../img/content/dest/large/robin_pokorny.jpg");
+}

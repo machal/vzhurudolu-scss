@@ -1,0 +1,50 @@
+// VD webfonts
+
+@font-face {
+  font-family: "ForoExtraBold";
+  src: url("../fonts/ForoXBol-webfont.eot");
+  src: url("../fonts/ForoXBol-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/ForoXBol-webfont.woff") format("woff"),
+    url("../fonts/ForoXBol-webfont.ttf") format("truetype"),
+    url("../fonts/ForoXBol-webfont.svg#ForoExtraBold") format("svg");
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+@font-face {
+  font-family: "ForoLight";
+  src: url("../fonts/ForoLig-webfont.eot");
+  src: url("../fonts/ForoLig-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/ForoLig-webfont.woff") format("woff"),
+    url("../fonts/ForoLig-webfont.ttf") format("truetype"),
+    url("../fonts/ForoLig-webfont.svg#ForoExtraBold") format("svg");
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+@font-face {
+  font-family: "ForoLight";
+  src: url("../fonts/foro_lightitalic_czech/ForoLigIta-webfont.eot");
+  src: url("../fonts/foro_lightitalic_czech/ForoLigIta-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/foro_lightitalic_czech/ForoLigIta-webfont.woff") format("woff"),
+    url("../fonts/foro_lightitalic_czech/ForoLigIta-webfont.ttf") format("truetype"),
+    url("../fonts/ForoLig-webfont.svg#ForoExtraBold") format("svg");
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: "ForoLight";
+  src: url("../fonts/foro_bold_czech/ForoBol-webfont.eot");
+  src: url("../fonts/foro_bold_czech/ForoBol-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/foro_bold_czech/ForoBol-webfont.woff") format("woff"),
+    url("../fonts/foro_bold_czech/ForoBol-webfont.ttf") format("truetype"),
+    url("../foro_bold_czech/ForoBol-webfont.svg#ForoExtraBold") format("svg");
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+}

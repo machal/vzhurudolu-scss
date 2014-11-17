@@ -1,0 +1,28 @@
+// Disqus comments
+
+.comment-invitation {
+  text-align: center;
+  // Kde se komentare a sdileci tlacitka vejdou na radku
+  @media screen and (min-width: 360px) {
+    margin: 1.9rem 0 0;
+    float: right;
+    text-align: right;
+  }
+}
+
+.comments {
+  clear: both;
+  @include layout-element;
+  overflow: auto;
+  transition: height 200ms;
+
+  .js & {
+    height: 0;
+  }
+
+  .js &.is-opened {
+    margin-top: 6rem;
+    height: auto;
+    margin-bottom: 6rem;
+  }
+}

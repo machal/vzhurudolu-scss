@@ -1,0 +1,51 @@
+// VzhuruDolu.cz main stylesheet
+
+// Normalize.CSS
+@import "lib/normalize";
+
+// Promenne
+@import "core/vd-variables";
+
+// Foundation a jeho nase upravy
+@import "foundation/vd-foundation";
+
+// Breakpoint kde radikalneji menime vzhled (zmensime pismo atd.)
+// TODO: breakpointy ukladat i s tim @media atd. (najit hotove reseni)
+$vd-screen-small: 600px;
+$vd-screen-mobile: 480px;
+
+// Mixiny (vyuzivaji promenne VD i Foundation)
+@import "core/vd-mixins";
+
+// Zakladna
+@import "base/vd-fonts";
+@import "base/vd-base";
+
+// Pomocne tridy
+@import "core/vd-helpers";
+
+// Layout
+@import "layout/vd-layout";
+
+// UI moduly
+@import "modules/vd-ad";
+@import "modules/vd-alert";
+@import "modules/vd-article";
+@import "modules/vd-articles";
+@import "modules/vd-box";
+@import "modules/vd-browser-stats";
+@import "modules/vd-button";
+@import "modules/vd-comments";
+@import "modules/vd-course-response";
+@import "modules/vd-foot";
+@import "modules/vd-form";
+@import "modules/vd-icon";
+@import "modules/vd-items-list";
+@import "modules/vd-list";
+@import "modules/vd-logo";
+@import "modules/vd-martin-img";
+@import "modules/vd-nav";
+@import "modules/vd-pagination";
+@import "modules/vd-section-head";
+@import "modules/vd-share";
+@import "modules/vd-similar-courses";

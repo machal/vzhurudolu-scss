@@ -1,0 +1,76 @@
+// VzhuruDolu.cz newsletter, socialky + paticka
+
+// --- VzhuruDolu.cz newsletter + odkazy na RSS a socialky ---
+
+.be-in-touch {
+  @include layout-element;
+  @include section;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  @media print {
+    display: none;
+  }
+}
+
+.rss-socials {
+  margin-bottom: 1rem;
+}
+
+.newsletter {
+  form {
+    vertical-align: middle;
+    line-height: 2rem;
+    height: 2rem;
+  }
+  .email-input {
+    display: inline;
+    width: 20rem;
+    margin: 0;
+    border-radius: $global-radius 0 0 $global-radius;
+
+    @media only screen and (max-width: $vd-screen-small) {
+      width: 12rem;
+    }
+
+  }
+  .email-button {
+    border-radius: 0 $global-radius $global-radius 0;
+    border-left: 0;
+    margin: 0 0 0 -0.3rem;
+
+    @media only screen and (max-width: $vd-screen-small) {
+      padding-left: .5rem;
+      padding-right: .5rem;
+    }
+  }
+
+}
+
+// TODO Firefox position hack
+// I kdyz zobrazuje stejne computed cisla, submit je o par pixelu vyssi
+// a jeste k tomu pousuty nahoru
+@-moz-document url-prefix() {
+  .email-button {
+    position: relative;
+    top: 1px;
+    height: rem-calc(34);
+    overflow: hidden;
+  }
+}
+
+
+// --- Paticka VD ---
+
+.foot {
+  @include layout-element;
+  @extend .small;
+  color: $vd-text-color-lighter;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 4rem;
+
+  > hr {
+    display: none;
+  }
+}

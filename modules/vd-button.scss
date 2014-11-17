@@ -1,0 +1,22 @@
+// VD button
+
+input[type=submit],
+button,
+.button {
+  @include vd-input-base;
+  cursor: pointer;
+
+  // Siroka varianta
+  &.button--wide {
+    @include vd-input-base;
+    width: 33%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,15 @@
+// Ohlas na skoleni
+// Napr. v detailu skoleni
+
+.course-response {}
+
+.course-response-name {
+  margin-bottom: 0.5rem;
+}
+
+.course-response-text {
+  &,
+  & p {
+    margin-bottom: 0;
+  }
+}

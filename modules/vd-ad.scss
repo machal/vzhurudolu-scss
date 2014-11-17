@@ -1,0 +1,82 @@
+// Reklamni buttonek na spodni hrane clanku
+
+// -- Pozice reklamy ---
+
+.ad {
+  z-index: 50;
+  margin: 0;
+  position: absolute;
+  right: -.5rem;
+  top: 17.5rem;
+  transform: translateZ(0);
+
+  @media (min-width: rem-calc(1024)) {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -6rem;
+    margin-left: 21rem;
+  }
+
+  @media (min-width: rem-calc(1240)) {
+    margin-left: 25.5rem;
+  }
+}
+
+// -- Vzhled --
+
+.ad {
+  font-size: 0.6rem;
+  line-height: 1.45;
+  width: 7.5rem;
+  height: 7.5rem;
+  text-align: center;
+      background: linear-gradient(to bottom,
+      lighten($vd-text-color-lightest, 25%),
+      lighten($vd-text-color-lightest, 20%));
+  border-radius: 50%;
+  box-sizing: border-box;
+  transition: opacity 0.25s;
+  box-shadow: inset -2px -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+// -- Vnitrni struktura --
+
+.ad {
+  a {
+    display: block;
+    border: 0;
+    color: $vd-text-color;
+    padding-top: 1.75rem;
+  }
+}
+
+// -- Stavy --
+
+.ad {
+  &:hover,
+  &:focus,
+  &:active {
+    transform: scale(1.1);
+
+    a {
+      text-decoration: none
+    }
+  }
+
+  // Zpocatku schovavame
+  .js & {
+    display: none;
+    opacity: 0;
+  }
+
+  // Pripravime k zobrazovani
+  &.is-ready {
+    display: block;
+  }
+
+  // A nakonec zobrazime
+  &.is-visible {
+    opacity: 1;
+  }
+}

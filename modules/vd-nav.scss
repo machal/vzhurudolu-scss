@@ -1,0 +1,125 @@
+// VzhuruDolu.cz nav
+
+// Navigation
+.nav {
+  @include layout-element;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid $vd-text-color-lightest;
+
+  ul {
+    text-align: center;
+  }
+
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
+// Item
+.nav-item {
+  font-weight: normal;
+  background: white;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: $global-radius $global-radius 0 0;
+  border: 1px solid $vd-text-color-lightest;
+  transition: 200ms;
+  margin-bottom: -1px; // TODO mensich displejich to v Chrome odskoci pod spodni border, FF OK
+
+  @media only screen and (max-width: $vd-screen-small) {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+// — po najeti mysi
+.nav-item {
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $vd-beige-color;
+    transition: 150ms;
+    text-decoration: none;
+  }
+}
+
+// – otevrena polozka
+strong .nav-item,
+strong.nav-item {
+  border-bottom: 1px solid white;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom: 1px solid $vd-beige-color;
+  }
+}
+
+// Item varianta: tenci
+.nav-item.nav-item--thin {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+
+// Nav varianta: site global navigation
+.nav--site {
+  margin-bottom: 0;
+  border-bottom: 0;
+
+  .nav-item {
+    box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.1);
+  }
+
+  strong .nav-item,
+  strong.nav-item {
+    color: white;
+    background: darken($primary-color, 25%);
+    border-color: darken($primary-color, 25%);
+  }
+}
+
+// Nav varianta: kdyz se zalozky nevejdou na sirku obrazovky
+// (konkretne na homepage)
+// Pod 760px z nich udelame normalni tlacitka.
+.nav--long {
+  @media screen and (max-width: 760px) {
+    border-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+
+    li {
+      display: block;
+    }
+
+    .nav-item {
+      display: block;
+      margin-bottom: .25rem;
+      border-radius: $global-radius;
+      border: 1px solid $vd-text-color-lightest;
+    }
+
+    strong .nav-item,
+    strong.nav-item {
+      background: $vd-beige-color;
+      border: 1px solid $vd-text-color-lightest;
+
+      &:hover,
+      &:focus,
+      &:active {
+        border-bottom: 1px solid $vd-text-color-lightest;
+      }
+    }
+  }
+}

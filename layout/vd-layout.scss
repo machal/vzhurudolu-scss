@@ -1,0 +1,56 @@
+// VzhuruDolu.cz layout
+
+// TODO v layout systemu je trochu bordel, refaktorovat a zdokumentovat
+
+// Layout je slozeny takto:
+//   .container
+//     .logo
+//     .nav
+//     .content-container
+//       .section-head // TODO rename
+//       .content
+//       .share (nekdy)
+//       .comments (nekdy)
+//       .similar-courses (nekdy)
+//     .be-in-touch // TODO rename
+//     .foot
+
+.container {
+  max-width: 58rem;
+  padding-top: 1rem;
+  padding-bottom: 0;
+  width: auto;
+  margin: 0 auto;
+  @media (min-width: 58rem) {
+    margin: 1rem auto;
+  }
+}
+
+.content-container {
+  background: white;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.1);
+  padding-bottom: 2rem;
+  @media only screen and (min-width: $vd-screen-mobile) {
+    border-radius: $global-radius;
+  }
+}
+
+.content {
+  @include layout-element;
+  @include section;
+}
+
+// Nas jednoduchy RWD layout
+// TODO
+// - nepouzit Foundation?
+// - nesjednotit s layoutem ve .vd-form?
+.vd-layout-row {
+  @include clearfix;
+  > .vd-layout-half {
+    width: 49%;
+    float: left;
+  }
+  > .vd-layout-half:last-child {
+    float: right;
+  }
+}

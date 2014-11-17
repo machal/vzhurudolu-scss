@@ -1,0 +1,41 @@
+// VD modul boxik s barevnym pozadim
+
+// TODO
+// - section narrow zpet
+// - patri i na <pre>?
+
+@mixin box-base {
+  @include section;
+  border-top: 1px dashed darken($vd-beige-color, 10%);
+  border-bottom: 1px dashed darken($vd-beige-color, 10%);
+  background: lighten($vd-beige-color, 8%);
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+// Jednoduchy boxik v textu
+.box {
+  @include box-base;
+  padding: 1.5rem 1rem 0.5rem;
+}
+
+// Varianta: Velky boxik ukryvajici cele bloky, napr. pro formular v objednavce
+.box--higher {
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+// Varianta: Boxik je posledni element v .conten-container,
+// takze sezere jeho spodni padding a zezdola nebude mit ramecek
+.box--latest {
+  border-bottom: 0;
+  padding-bottom: 3rem;
+  margin-bottom: -2rem;
+  @media only screen and (min-width: $vd-screen-small) {
+    border-radius: 0 0 $global-radius $global-radius;
+  }
+}
+
+.article .box h2 {
+  margin-top: 0;
+}

@@ -1,0 +1,42 @@
+// Foundation - nastaveni a importy jeho komponent
+
+// --- Nastaveni ---
+
+$accordion-navigation-bg-color: lighten($vd-text-color-lightest, 20%);
+
+// --- Importy ---
+
+@import "../../bower_components/foundation/scss/foundation/components/block-grid";
+@import "../../bower_components/foundation/scss/foundation/components/grid";
+@import "../../bower_components/foundation/scss/foundation/components/accordion";
+
+// --- Upravy _accordion pro potreby VD.cz ---
+
+// … mezery mezi polozkami
+
+.accordion .accordion-navigation > a {
+  margin-bottom: 1px;
+}
+
+// … kulate rohy
+
+.accordion .accordion-navigation:first-child > a {
+  border-radius: $global-radius $global-radius 0 0;
+}
+
+.accordion .accordion-navigation:last-child > a {
+  border-radius: 0 0 $global-radius $global-radius;
+}
+
+// … kolize s mym .content
+
+.accordion .content {
+  border-top: none !important;
+  margin: 0;
+}
+
+.accordion .accordion-navigation > a,
+.accordion dd > a {
+  font-family: "ForoLight", sans-serif;
+}
+

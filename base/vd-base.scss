@@ -1,0 +1,172 @@
+// VzhuruDolu.cz base
+
+// Typo reset
+
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, dl, table,
+blockquote, pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+dd {
+  margin-left: 0
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-bottom: 0;
+}
+
+// Zakladni velikosti pisma
+
+html {
+  font-size: 19px;
+  line-height: 24px;
+
+  @media only screen and (max-width: $vd-screen-small) {
+    font-size: 15px;
+    line-height: 16px;
+  }
+
+  @media print {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+}
+
+
+body {
+  font-family: "ForoLight", sans-serif;
+  color: $vd-text-color;
+
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  background: #efefef url("../img/style/ticks/ticks.png") repeat;
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url("../img/style/ticks/ticks@2x.png");
+  }
+}
+
+h1,
+.h1 {
+  @include heading-1;
+}
+
+h2,
+.h2 {
+  @include heading-2;
+}
+
+h3,
+.h3 {
+  @include heading-3;
+}
+
+table {
+  margin-bottom: 1.25rem;
+  width: 100%;
+  border-top: 1px solid $vd-text-color-lightest;
+  border-collapse: collapse;
+
+  th,
+  td {
+    text-align: left;
+    padding: 0.75rem 1rem 0.75rem 0;
+    border-bottom: 1px solid $vd-text-color-lightest;
+  }
+
+  caption {
+    font-weight: bold;
+    text-align: center;
+    padding: 0.75rem 0;
+  }
+}
+
+// UL/OL
+
+ul,
+ol {
+  padding-left: 1rem;
+}
+
+// Blockquote
+
+blockquote {
+  padding-top: 0;
+  border-left: .2rem solid lighten($vd-text-color-lightest, 20%);
+  padding-left: .75rem;
+  margin-left: 0;
+}
+
+// Odkazy
+
+a {
+  text-decoration: none;
+  color: $vd-green-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+    color: darken($vd-green-color, 10%);
+  }
+}
+
+
+// Kod
+
+pre {
+  overflow: auto;
+  max-width: 100%;
+  white-space: pre;
+  line-height: 1.15;
+}
+
+pre {
+  // Nikoliv margin-bottom; kvuli potencialnimu scrollovatku…
+  padding-bottom: 1.25rem;
+  margin-bottom: 0;
+}
+
+code {
+  font-family: Consolas, Menlo, "DejaVu Sans Mono", monospace;
+  color: mix($vd-brown-color, $vd-text-color, 40%);
+  letter-spacing: -0.01rem;
+}
+
+pre code {
+  white-space: pre;
+}
+
+// Formulare
+
+input, select, textarea, button {
+  font-family: "ForoLight", sans-serif;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  @include vd-input-base;
+  background: white;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $vd-text-color-lighter;
+  }
+}
+
+small,
+.small,
+.font-small {
+  @include font-small;
+}

@@ -1,0 +1,94 @@
+// Helpery, pomocne tridy
+
+.center,
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.without-margin-top {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.without-margin-bottom {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.margin-bottom-xs {
+  margin-bottom: 0.5rem;
+}
+
+// Fluidni media:
+// Youtube, mapy, atd…
+
+.rwd-media {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.rwd-media iframe,
+.rwd-media video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+// Unveil.js obrazky
+// TODO nezobrazuji se pokud jsou pred zlomem stranky, potreba zaskrolovat
+.unveil {
+  @include opacity(0);
+  @include transition(opacity 0.3s ease-in);
+}
+
+
+// Only display content to screen readers
+// Source: https://github.com/twbs/bootstrap/blob/a92aea5127e805cb44c9d606a71c48fa19ee157b/less/scaffolding.less
+// See: http://a11yproject.com/posts/how-to-hide-content/
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+// Use in conjunction with .sr-only to only display content when it's focused.
+// Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+// Credit: HTML5 Boilerplate
+
+.sr-only-focusable {
+  &:active,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}
+
+// Rychly float doleva/doprava
+
+.pull-left {
+  float: left !important;
+}
+
+.pull-right {
+  float: right !important;
+}

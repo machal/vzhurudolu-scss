@@ -1,0 +1,68 @@
+// VzhuruDolu.cz article
+
+// Nadpisy maji u clanku mirne odsazeni zezhora, aby byl
+// patrny zacatek sekce.
+// Horni padding je mensi, pokud nasleduji za pre, protoze ten
+// pouziva padding-bottom kvuli scrollovatku.
+
+.article h2 {
+  padding-top: .5rem;
+}
+
+.article pre + h2 {
+  padding-top: .25;
+}
+
+.article h3 {
+  padding-top: .25rem;
+}
+
+.article pre + h3 {
+  padding-top: 0;
+}
+
+// Oddeleni obsahu od nasledujiciho textu
+
+.article-toc {
+  border-bottom: 1px dashed $vd-text-color-lightest;
+  @include section;
+}
+
+// Datum pod nadpisem clanku
+
+.article-date {
+  margin: 0;
+  font-style: italic;
+  .section-head & {
+    text-align: center;
+    color: white;
+    color: rgba(255, 255, 255, 0.5);
+    a {
+      color: white;
+      color: rgba(255, 255, 255, 0.5);
+      border-color: white;
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+    a:hover,
+    a:focus,
+    a:active {
+      color: white;
+      border-color: white;
+    }
+  }
+  // Datum v seznamech clanku
+  h2 + & {
+    margin-top: -1rem;
+    @media only screen and (max-width: $vd-screen-small) {
+      margin-top: -0.5rem;
+    }
+  }
+}
+
+// Codepen.io embed
+
+[id^="cp_embed"] {
+  @media print {
+    display: none;
+  }
+}

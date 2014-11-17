@@ -1,0 +1,58 @@
+// VzhuruDolu.cz form
+
+.vd-form {
+  .form-row {
+    clear: both;
+    margin-bottom: 0.5rem;
+  }
+}
+
+// Sloupec s nazvem policka
+.vd-form {
+  .label {
+    float: left;
+    width: 50%;
+    text-align: right;
+    padding-top: 0.5rem;
+    // Napoveda potrebuje trochu mensi sirku radku
+    small {
+      @media only screen and (min-width: $vd-screen-small) {
+        float: right;
+        max-width: 22rem;
+      }
+    }
+  }
+}
+
+// Sloupec s polickem
+.vd-form {
+  .controls {
+    float: right;
+    width: 49%;
+    input,
+    select,
+    textarea {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+// Velikosti inputu
+.vd-form {
+  .size-l {
+    width: 10rem;
+  }
+  .size-xl {
+    width: 15rem;
+    @media only screen and (max-width: rem-calc(400)) {
+      width: 10rem;
+    }
+  }
+}
+
+.vd-form {
+  .help-inline {
+    display: block;
+    font-style: italic;
+  }
+}

@@ -1,0 +1,98 @@
+// VzhuruDolu.cz hlavicka sekce s nadpisem
+
+// TODO
+// - refactor & HTML is ugly
+// - nicer background
+// - let's flexbox
+
+.section-head {
+  background: darken($primary-color, 25%);
+  background:
+    radial-gradient(ellipse at bottom center,
+    darken($vd-green-color, 20%),
+    darken($primary-color, 25%) 66%);
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  text-align: center;
+  color: white;
+  height: 18rem;
+  display: table;
+  width: 100%;
+  // TODO Webkit hack
+  // navigace couha do .section-head
+  z-index: 10;
+  position: relative;
+
+  @media only screen and (min-width: $vd-screen-small) {
+    border-radius: $global-radius $global-radius 0 0;
+  }
+
+  @media print {
+    height: auto;
+  }
+
+}
+
+.section-head {
+  .section-head-in {
+    display: table-row;
+  }
+  .section-head-content {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .section-head-content-in {
+    max-width: 35rem;
+    margin: 0 auto;
+    @media (max-width: $vd-screen-mobile) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  h1 {
+    color: white;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  }
+
+  a {
+    color: white;
+    border-bottom: 1px dotted white;
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+    border-bottom-style: solid;
+  }
+
+
+}
+
+// Text v sekcni hlavicce
+.section-perex {
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: $vd-screen-mobile) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .section-home & {
+    max-width: 20rem;
+  }
+  .section-blog & {
+    max-width: 25rem;
+  }
+  .section-prirucka & {
+    max-width: 28rem;
+  }
+  .section-kurzy & {
+    max-width: 35rem;
+  }
+  .section-autor & {
+    max-width: 18rem;
+  }
+}

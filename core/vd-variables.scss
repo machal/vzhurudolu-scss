@@ -1,0 +1,50 @@
+// VD promenne
+
+// Barvy
+
+// http://paletton.com/#uid=32x0u0krGmDj3t+nVqQvditF4dc
+$vd-green-color: #5fa316;
+$vd-beige-color: #f4f1c7;
+$vd-brown-color: #b43b18;
+
+$vd-text-color: darken($vd-beige-color, 70%);
+$vd-text-color-lighter: mix($vd-text-color, white, $weight: 66%);
+$vd-text-color-lightest: lighten($vd-text-color-lighter, 20%);
+$vd-bg-color-light: lighten($vd-beige-color, 10%);
+
+// Tridy s barvickami (pro /schema)
+
+.vd-green-bg {
+  background: $vd-green-color;
+  color: white;
+}
+
+.vd-beige-bg {
+  background: $vd-beige-color;
+  color: $vd-text-color;
+}
+
+.vd-brown-bg {
+  background: $vd-brown-color;
+  color: white;
+}
+
+.vd-text-color {
+  background: $vd-text-color;
+  color: white;
+}
+
+.vd-text-color-lighter {
+  background: $vd-text-color-lighter;
+  color: white;
+}
+
+.vd-text-color-lightest {
+  background: $vd-text-color-lightest;
+  color: white;
+}
+
+.vd-bg-color-light {
+  background: $vd-bg-color-light;
+  color: $vd-text-color;
+}

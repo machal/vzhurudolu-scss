@@ -1,0 +1,116 @@
+// VzhuruDolu.cz: Share tlacitka pod clanky
+
+.share {
+  text-align: center;
+  color: $vd-text-color-lighter;
+  margin-top: 1.5rem;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  @media print {
+    display: none;
+  }
+
+  // Kde se komentare a sdileci tlacitka vejdou na radku
+  @media screen and (min-width: 360px) {
+    float: left;
+    text-align: left;
+  }
+}
+
+.share {
+  .share-it {
+    margin-bottom: 0.25rem;
+  }
+  .share-comments {
+    margin-top: 0.5rem;
+  }
+}
+
+// Social likes plugin
+// sapegin.github.io/social-likes/
+
+.social-likes {
+  padding: 0;
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+    margin-left: 0.25rem;
+  }
+
+  li:first-child {
+    margin-left: 0;
+  }
+
+  // Kde se komentare a sdileci tlacitka vejdou na radku
+  @media screen and (min-width: 360px) {
+    margin: 0 auto 0.5rem;
+  }
+}
+
+.social-likes__icon {
+  font-family: "vzhurudolu-icons";
+  font-size: 1.5rem;
+  width: 1.75rem;
+  height: 1.5rem;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $vd-green-color;
+  }
+}
+
+.social-likes__icon_facebook {
+  @extend .icon-facebook;
+}
+
+.social-likes__icon_twitter {
+  @extend .icon-twitter;
+}
+
+.social-likes__icon_plusone {
+  @extend .icon-google-plus;
+}
+
+.social-likes__counter {
+  position: relative;
+  top: .35rem;
+  height: 1.6rem;
+  min-width: 1.6rem;
+
+  display: inline-block;
+  color: $vd-text-color-lighter;
+  background: lighten($vd-text-color-lightest, 10%);
+  border-radius: $global-radius;
+
+  font-size: 0.75rem;
+  line-height: 2.3;
+  text-align: center;
+  vertical-align: middle;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -.25rem;
+    left: -.3rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: .3rem .6rem .3rem 0;
+    border-color: transparent lighten($vd-text-color-lightest, 10%) transparent transparent;
+  }
+}

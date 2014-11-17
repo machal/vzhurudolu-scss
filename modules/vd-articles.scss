@@ -1,0 +1,29 @@
+// Articles: seznam clanku
+
+// TODO potrebujeteme to kdyz mame List?
+
+.articles {
+  @include space(bottom, 3);
+  h2, h3 {
+    @include space(top, 2);
+    margin-bottom: 0;
+  }
+  .description {
+    p {
+      display: inline;
+    }
+  }
+}
+
+.articles.without-perex {
+  h2, h3 {
+    @include space(top, 1);
+    margin-bottom: 0;
+  }
+  text-align: center;
+  @media only screen and (min-width: $vd-screen-small) {
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
